@@ -1,7 +1,7 @@
 var Botkit = require('botkit');
 var controller = Botkit.slackbot();
 var bot = controller.spawn({
-  token: 'insert token here'
+  token: process.env.SLACK_TOKEN
 })
 bot.startRTM(function(err,bot,payload) {
   if (err) {
