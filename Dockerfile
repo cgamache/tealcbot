@@ -9,4 +9,4 @@ ADD . /app
 
 RUN cd /app ; npm install 
 
-CMD ["/usr/bin/node", "/app/index.js"] 
+CMD cd /app; /usr/bin/node index.js
