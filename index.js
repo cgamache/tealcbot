@@ -9,6 +9,6 @@ bot.startRTM(function(err,bot,payload) {
   }
 });
 
-controller.hears("^yes|ya|si|indeed|affirmative|vg|sure|def|definitely|agreed|roger|roger that|certainly|absolutely|yep|yup|uh-huh|okay|ok|kk|aye$",["direct_message","direct_mention","mention","ambient"],function(bot,message) {
+controller.hears(["right\?$","^yes|ya|si|indeed|affirmative|vg|sure|def|definitely|agreed|roger|roger that|certainly|absolutely|yep|yup|uh-huh|okay|ok|kk|aye$"],["direct_message","direct_mention","mention","ambient"],function(bot,message) {
   bot.reply(message,'Indeed.');
 });
