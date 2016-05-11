@@ -1,5 +1,5 @@
 name: Teal'c Bot
 description: Your own personal, agreeable, Jaffa
-avatar: images/avatar.jpg
+avatar: /app/images/avatar.jpg
 slackscopes:
   - bot
