@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/cgamache/tealcbot.git"
   },
-  "scripts":{
+  "scripts": {
     "start": "node index.js"
   },
   "author": "ADDI",
