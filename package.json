@@ -13,6 +13,6 @@
   "author": "ADDI",
   "license": "MIT",
   "dependencies": {
-    "botkit": "^0.1.1"
+    "botkit": "^0.7.4"
   }
 }
