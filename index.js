@@ -8,11 +8,11 @@ var Botkit = require('botkit');
 
 var controller = Botkit.slackbot();
 
-var init = function() {
+var bot = controller.spawn({
+	token: process.env.SLACK_TOKEN
+});
 
-	var bot = controller.spawn({
-	  token: process.env.SLACK_TOKEN
-	});
+var init = function() {
 
 	bot.startRTM(function(err,bot,payload) {
 	  if (err) {
@@ -20,11 +20,9 @@ var init = function() {
 	  }
 	});
 
-	return bot;
-
 }
 
-var bot = init();
+init();
 
 controller.hears(utterances,["direct_message","direct_mention","mention","ambient"],function(bot,message) {
   setTimeout(function () { 
@@ -34,7 +32,7 @@ controller.hears(utterances,["direct_message","direct_mention","mention","ambien
 
 controller.on('rtm_close', function() {
   console.log('Disconnected from RTM');
-  bot = init();
+  init();
 });
 
 
